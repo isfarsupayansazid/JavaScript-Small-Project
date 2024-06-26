@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .button{
+            padding: 10px 30px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .button{
+            padding: 10px 30px;
+            font-size: 50px;
+						/* background-color : red; */
+        }
+    </style>
+</head>
+<body>
+	<h2 class="button">Code<h2>
+    <script>
+        // code generator++++++++++++++++++
+        
+        
+        // console.log(Numbers);
+
+				function getRandomCode(){
+                    const Numbers = "0123456789abcdef";
+					let colors = '#';
+					for(let i = 0; i < 6; i++){
+                        colors = colors + Numbers[Math.floor(Math.random() * 16)]
+						
+					}
+                    return colors
+                    
+				}
+        // Change color code and text
+                // console.log(getRandomCode())
+
+                function changeColorCode (){
+                    let colorCode = getRandomCode();
+                    let button = document.querySelector(".button");
+                    button.innerHTML = colorCode;
+                    button.style.backgroundColor = "white";
+                    button.style.color = colorCode
+                    document.body.style.backgroundColor = colorCode
+                }
+        document.querySelector(".button").addEventListener('click',changeColorCode)
+    </script>
+</body>
+</html>
+</body>
+</html>

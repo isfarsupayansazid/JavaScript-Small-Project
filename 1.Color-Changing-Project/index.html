@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+      body{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        height : 100vh;
+        width : 100vw;
+        margin : 0px;
+        padding: 0px;
+      }
+      .main{
+        display: flex;
+        gap: 20px;
+      }
+      .red{
+        height : 250px;
+        width : 250px;
+        background-color : red;
+      }
+      .blue {
+        height: 250px;
+        width: 250px;
+        background-color: blue;
+      }
+      .green{
+        height: 250px;
+        width: 250px;
+        background-color: green;
+      }
+</style>
+<body>
+  <div class="main">
+      <button class="red" id="red"></button>
+      <button class="blue" id="blue"></button>
+      <button class="green" id="green"></button>
+  </div>
+  <script>
+    const buttons = document.querySelectorAll("button")
+    // console.log(buttons);
+    
+    buttons.forEach(function(button){
+        // console.log(button);
+        button.addEventListener('click', function (e){
+            console.log(e.target);
+            if(e.target.id == "red"){
+                document.body.style.backgroundColor = e.target.id;
+            }
+            if(e.target.id == "blue"){
+                document.body.style.backgroundColor = e.target.id;
+            }
+            if(e.target.id == "green"){
+                document.body.style.backgroundColor = e.target.id;
+            }
+        })
+    })
+  </script>
+</body>
+</html>
